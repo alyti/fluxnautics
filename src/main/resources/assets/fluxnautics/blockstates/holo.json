@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fluxnautics:block/holo/main"
+    }
+  }
+}

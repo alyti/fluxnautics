@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_block"
+    },
+    "B": {
+      "item": "mekanism:ultimate_induction_cell"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "M": {
+      "item": "fluxnautics:forcefield_matrix"
+    },
+    "Q": {
+      "item": "mekanism:quantum_entangloporter"
+    },
+    "S": {
+      "item": "fluxnautics:forcefield_harmonizer"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AMA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:forcefield_emitter"
+  }
+}

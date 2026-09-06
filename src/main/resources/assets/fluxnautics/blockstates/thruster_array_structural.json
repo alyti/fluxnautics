@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fluxnautics:block/thruster_array/structural"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/thruster_array/structural",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/thruster_array/structural",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/thruster_array/structural",
+      "y": -90
+    }
+  }
+}

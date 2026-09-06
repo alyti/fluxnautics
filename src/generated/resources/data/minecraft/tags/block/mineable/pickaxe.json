@@ -1,0 +1,31 @@
+{
+  "values": [
+    "fluxnautics:field_drive",
+    "fluxnautics:holo",
+    "fluxnautics:stabilizer",
+    "fluxnautics:daemon_protocol",
+    "fluxnautics:inertia_dampener",
+    "fluxnautics:flux_tether",
+    "fluxnautics:flux_tether_link",
+    "fluxnautics:spatial_anchor",
+    "fluxnautics:forcefield_emitter",
+    "fluxnautics:forcefield_harmonizer",
+    "fluxnautics:cloak_generator",
+    "fluxnautics:anti_grav",
+    "fluxnautics:assembly_terminal",
+    "fluxnautics:conduit_connector",
+    "fluxnautics:conduit_port",
+    "fluxnautics:thruster_array_structural",
+    "fluxnautics:thruster_array_controller",
+    "fluxnautics:thruster_array_subcontroller",
+    "fluxnautics:ion_thruster",
+    "fluxnautics:thruster_array_booster_basic",
+    "fluxnautics:thruster_array_booster_advanced",
+    "fluxnautics:thruster_array_booster_elite",
+    "fluxnautics:thruster_array_booster_ultimate",
+    "fluxnautics:thruster_array_booster_creative",
+    "fluxnautics:thruster_array_alignment_x",
+    "fluxnautics:thruster_array_alignment_y",
+    "fluxnautics:thruster_array_alignment_z"
+  ]
+}

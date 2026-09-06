@@ -1,0 +1,25 @@
+{
+  "tile.flux_tether.assemble": {
+    "sounds": [
+      "fluxnautics:tile/flux_tether/assemble"
+    ],
+    "subtitle": "sound_event.fluxnautics.tile.flux_tether.assemble"
+  },
+  "tile.flux_tether.beam_telegraph": {
+    "sounds": [
+      "fluxnautics:tile/flux_tether/beam_telegraph"
+    ]
+  },
+  "tile.flux_tether.disassemble": {
+    "sounds": [
+      "fluxnautics:tile/flux_tether/disassemble"
+    ],
+    "subtitle": "sound_event.fluxnautics.tile.flux_tether.disassemble"
+  },
+  "tile.forcefield_emitter": {
+    "sounds": [
+      "fluxnautics:tile/forcefield_emitter"
+    ],
+    "subtitle": "sound_event.fluxnautics.tile.forcefield_emitter"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "vertex": "fluxnautics:field/field",
+  "fragment": "fluxnautics:field/field",
+  "textures": {
+    "SkySampler": {
+      "type": "location",
+      "location": "textures/misc/enchanted_glint_item.png",
+      "filter": {
+        "blur": true
+      }
+    }
+  }
+}

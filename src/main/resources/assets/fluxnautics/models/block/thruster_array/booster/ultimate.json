@@ -1,0 +1,10 @@
+{
+    "render_type": "minecraft:cutout",
+    "parent": "fluxnautics:block/thruster_array/booster/base",
+    "textures": {
+        "particle": "fluxnautics:block/thruster_array_booster_ultimate",
+        "all": "fluxnautics:block/thruster_array_booster_ultimate",
+        "glow": "fluxnautics:block/thruster_array_booster_ultimate_glow",
+        "led": "fluxnautics:block/thruster_array_booster_ultimate_led"
+    }
+}

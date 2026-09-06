@@ -1,0 +1,8 @@
+{
+  "vertex": "fluxnautics:blueprint/outline_blueprint",
+  "fragment": "fluxnautics:blueprint/outline_blueprint",
+  "textures": {
+    "Palette": "fluxnautics:textures/effects/ion_palette.png",
+    "Dither": "fluxnautics:textures/effects/dither.png"
+  }
+}

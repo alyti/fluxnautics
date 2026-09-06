@@ -1,0 +1,6 @@
+{
+  "selector": "fluxnautics:spatial_anchor",
+  "properties": {
+    "sable:mass": 64
+  }
+}

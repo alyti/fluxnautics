@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "C": {
+      "item": "mekanism:pellet_antimatter"
+    },
+    "Q": {
+      "item": "mekanism:teleportation_core"
+    },
+    "S": {
+      "item": "mekanism:supercharged_coil"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "CSC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:anti_grav"
+  }
+}

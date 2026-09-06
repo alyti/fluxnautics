@@ -1,0 +1,27 @@
+{
+    DataVersion: 3955,
+    size: [3, 7, 5],
+    data: [
+        {pos: [2, 0, 2], state: "fluxnautics:thruster_array_booster_basic{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_booster_basic", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 0, 3], state: "mekanism:creative_energy_cube{facing:west,fluid_logged:empty}", nbt: {component_config: {config0: [I; 4, 4, 4, 4, 4, 4], config3: [I; 4, 1, 1, 1, 1, 1], eject0: 1b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 15, energy_containers: [{container: 0b, stored: 9223372036854775807L}], id: "mekanism:creative_energy_cube", redstone: 1b}},
+        {pos: [2, 1, 2], state: "fluxnautics:thruster_array_structural{active:true,facing:north}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_structural", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 1, 3], state: "fluxnautics:thruster_array_controller{active:true,facing:south}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_controller", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 1, 4], state: "simulated:throttle_lever{face:wall,facing:south,inverted:false}", nbt: {ChangeTimer: 0, State: 15, id: "simulated:throttle_lever"}},
+        {pos: [2, 2, 2], state: "fluxnautics:thruster_array_alignment_y{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_alignment_y", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 3, 2], state: "fluxnautics:thruster_array_alignment_y{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_alignment_y", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 4, 2], state: "fluxnautics:thruster_array_alignment_y{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_alignment_y", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 5, 2], state: "fluxnautics:thruster_array_alignment_y{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_alignment_y", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}},
+        {pos: [2, 6, 1], state: "fluxnautics:ion_thruster{down:false,down_left:false,down_right:false,facing:south,front:false,left:false,right:false,up:false,up_left:false,up_right:false}", nbt: {group: 0, id: "fluxnautics:ion_thruster", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b}},
+        {pos: [2, 6, 2], state: "fluxnautics:thruster_array_alignment_y{active:true,facing:up}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_alignment_y", inventory_id: [I; 601167221, -1980415605, -1107984276, -1587001115], redstone: 0b, update_delay: 0}}
+    ],
+    entities: [],
+    palette: [
+        "fluxnautics:thruster_array_booster_basic{active:true,facing:up}",
+        "mekanism:creative_energy_cube{facing:west,fluid_logged:empty}",
+        "fluxnautics:thruster_array_structural{active:true,facing:north}",
+        "fluxnautics:thruster_array_controller{active:true,facing:south}",
+        "simulated:throttle_lever{face:wall,facing:south,inverted:false}",
+        "fluxnautics:thruster_array_alignment_y{active:true,facing:up}",
+        "fluxnautics:ion_thruster{down:false,down_left:false,down_right:false,facing:south,front:false,left:false,right:false,up:false,up_left:false,up_right:false}"
+    ]
+}

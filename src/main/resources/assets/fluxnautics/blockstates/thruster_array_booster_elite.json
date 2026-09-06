@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "fluxnautics:block/thruster_array/booster/elite" }
+  }
+}

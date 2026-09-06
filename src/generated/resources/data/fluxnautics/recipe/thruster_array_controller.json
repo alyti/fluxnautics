@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    "B": {
+      "item": "fluxnautics:thruster_array_subcontroller"
+    },
+    "S": {
+      "item": "fluxnautics:thruster_array_structural"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BSB",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:thruster_array_controller"
+  }
+}

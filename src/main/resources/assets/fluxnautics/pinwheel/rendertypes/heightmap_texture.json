@@ -1,0 +1,37 @@
+{
+  "format": "POSITION_TEX",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": true,
+  "outline": false,
+  "layers": [
+    {
+      "type": "minecraft:texture",
+      "texture": "fluxnautics:textures/misc/heightmap.png",
+      "blur": true,
+      "mipmap": false
+    },
+    {
+      "type": "veil:shader",
+      "name": "fluxnautics:map/map_texture"
+    },
+    {
+      "type": "minecraft:transparency",
+      "mode": "translucent"
+    },
+    {
+      "type": "minecraft:lightmap"
+    },
+    {
+      "type": "minecraft:layering"
+    },
+    {
+      "type": "minecraft:cull",
+      "face": "none"
+    },
+    {
+      "type": "veil:depth_clamp"
+    }
+  ]
+}

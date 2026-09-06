@@ -1,0 +1,59 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.alyti.fluxnautics.mixin",
+  "plugin": "dev.alyti.fluxnautics.mixin.FluxnauticsMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ClipContextMixin",
+    "compatibility.create.ContraptionAccessor",
+    "compatibility.create.ControlledContraptionEntityAccessor",
+    "compatibility.create.ContraptionVisualMixinMixin",
+    "compatibility.create.FluxAssemblyHelperCreateMixin",
+    "compatibility.flywheel.BlockEntityStorageMixinMixin",
+    "compatibility.flywheel.SimpleSubLevelGroupRendererMixin",
+    "compatibility.simulated.FluxAssemblyHelperSimulatedMixin",
+    "embedded.create_mekanism_compat.BlockBoundingAssemblyMixin",
+    "embedded.create_mekanism_compat.BlockBoundingCollisionMixin",
+    "embedded.create_mekanism_compat.TileEntityBasicLaserMixin",
+    "mekanism.BaseComputerHelperMixin",
+    "mekanism.BaseFilterMixin",
+    "mekanism.ChemicalExtension",
+    "mekanism.FilterTypeMixin",
+    "mekanism.MixinItemConfigurator",
+    "mekanism.SlotOverlayAccessor",
+    "mekanism.SlotOverlayMixin",
+    "mekanism.TileEntityBasicLaserMixin",
+    "mekanism.WarningTypeMixin",
+    "mekanism.WarpChemical",
+    "sable.BlockGetterMixinMixin",
+    "sable.VanillaSubLevelBlockEntityRendererMixin",
+    "sable.VanillaSubLevelRenderDispatcherMixin"
+  ],
+  "client": [
+    "compatibility.flywheel.VisualizationManagerImplMixin",
+    "compatibility.flywheel.VisualManagerImplMixin",
+    "embedded.create_mekanism_compat.client.BlockBoundingMixin",
+    "embedded.create_mekanism_compat.client.LaserParticleMixin",
+    "embedded.create_mekanism_compat.client.MekanismRendererMixin",
+    "field.LevelRendererMixin",
+    "field.LightTextureMixin",
+    "field.VanillaSubLevelRenderDispatcherMixin",
+    "interaction_callback.KeyboardHandlerMixin",
+    "interaction_callback.KeyMappingInvoker",
+    "interaction_callback.LocalPlayerMixin",
+    "interaction_callback.MouseHandlerMixin",
+    "mekanism.client.AccessorGuiConfigurableTile",
+    "mekanism.client.MixinGuiMekanismTile",
+    "sable.ClientSubLevelContainerMixin",
+    "sable.DebugRendererMixinMixin",
+    "sable.EntityRendererMixinMixin",
+    "sable.LevelRendererMixinMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

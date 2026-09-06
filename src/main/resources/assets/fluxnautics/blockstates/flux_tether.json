@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "fluxnautics:block/flux_tether"
+    },
+    "facing=down": {
+      "model": "fluxnautics:block/flux_tether",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "fluxnautics:block/flux_tether",
+      "x": -90,
+      "y": 180
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/flux_tether",
+      "x": -90
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/flux_tether",
+      "x": -90,
+      "y": -90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/flux_tether",
+      "x": -90,
+      "y": 90
+    }
+  }
+}

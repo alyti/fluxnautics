@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "mekanism:advanced_induction_provider"
+    },
+    "O": {
+      "item": "fluxnautics:thruster_array_structural"
+    },
+    "P": {
+      "item": "fluxnautics:thruster_array_booster_basic"
+    },
+    "X": {
+      "item": "mekanism:hdpe_sheet"
+    }
+  },
+  "pattern": [
+    "XIX",
+    "POP",
+    "XIX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:thruster_array_booster_advanced"
+  }
+}

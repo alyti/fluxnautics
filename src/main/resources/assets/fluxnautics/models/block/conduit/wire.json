@@ -1,0 +1,20 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made by Farcr",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"1": "simulated:block/rope_particle"
+	},
+	"elements": [
+		{
+			"from": [11, 0, 5],
+			"to": [5, 16, 11],
+			"faces": {
+				"north": {"uv": [12, 16, 6, 0], "texture": "#1"},
+				"east": {"uv": [6, 0, 12, 16], "texture": "#1"},
+				"south": {"uv": [13, 16, 7, 0], "texture": "#1"},
+				"west": {"uv": [7, 0, 13, 16], "texture": "#1"}
+			}
+		}
+	]
+}

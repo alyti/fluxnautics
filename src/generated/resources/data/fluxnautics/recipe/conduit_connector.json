@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mekanism:laser"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "Q": {
+      "item": "mekanism:laser_tractor_beam"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "BQB",
+    "CBC"
+  ],
+  "result": {
+    "count": 2,
+    "id": "fluxnautics:conduit_connector"
+  }
+}

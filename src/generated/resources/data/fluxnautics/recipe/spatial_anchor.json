@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "C": {
+      "item": "fluxnautics:stabilizer"
+    },
+    "D": {
+      "item": "fluxnautics:inertia_dampener"
+    },
+    "Q": {
+      "item": "fluxnautics:anti_grav"
+    },
+    "S": {
+      "item": "mekanism:dimensional_stabilizer"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "DSD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:spatial_anchor"
+  }
+}

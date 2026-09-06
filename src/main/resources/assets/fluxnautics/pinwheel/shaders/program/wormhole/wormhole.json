@@ -1,0 +1,17 @@
+{
+  "vertex": "fluxnautics:wormhole/wormhole",
+  "fragment": "fluxnautics:wormhole/wormhole",
+  "textures": {
+    "SkySampler2": {
+      "type": "location",
+      "location": "textures/environment/end_sky.png",
+      "filter": {
+        "blur": true
+      }
+    },
+    "SkySampler": {
+      "type": "framebuffer",
+      "name": "veil:first_person"
+    }
+  }
+}

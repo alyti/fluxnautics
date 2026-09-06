@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:pellet_antimatter"
+    },
+    "B": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "C": {
+      "item": "mekanism:alloy_atomic"
+    },
+    "M": {
+      "item": "mekanism:module_gravitational_modulating_unit"
+    },
+    "Q": {
+      "item": "mekanism:quantum_entangloporter"
+    },
+    "S": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AMA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:inertia_dampener"
+  }
+}

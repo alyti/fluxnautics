@@ -1,0 +1,27 @@
+{
+  "format": "POSITION_TEX_COLOR",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": false,
+  "outline": false,
+  "layers": [
+    {
+      "type": "veil:shader",
+      "name": "fluxnautics:laser/laser_classic"
+    },
+    {
+      "type": "minecraft:transparency",
+      "mode": "lightning"
+    },
+    {
+      "type": "minecraft:write_mask",
+      "color": true,
+      "depth": false
+    },
+    {
+      "type": "minecraft:cull",
+      "face": "none"
+    }
+  ]
+}

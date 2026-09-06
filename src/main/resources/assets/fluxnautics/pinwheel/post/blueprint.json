@@ -1,0 +1,11 @@
+{
+  "stages": [
+    {
+      "type": "veil:blit",
+      "shader": "fluxnautics:blueprint/outline_blueprint",
+      "in": "fluxnautics:blueprint",
+      "out": "fluxnautics:blueprint_final",
+      "clear": false
+    }
+  ]
+}

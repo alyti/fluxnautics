@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "fluxnautics:block/conduit/base",
+      "x": -90
+    },
+    "facing=down": {
+      "model": "fluxnautics:block/conduit/base",
+      "x": 90
+    },
+    "facing=north": {
+      "model": "fluxnautics:block/conduit/base"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/conduit/base",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/conduit/base",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/conduit/base",
+      "y": -90
+    }
+  }
+}

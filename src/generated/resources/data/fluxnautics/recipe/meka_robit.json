@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "tag": "c:pellets/polonium"
+    },
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "M": {
+      "item": "mekanism:ultimate_induction_cell"
+    },
+    "Q": {
+      "item": "mekanism:robit"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AMA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:meka_robit"
+  }
+}

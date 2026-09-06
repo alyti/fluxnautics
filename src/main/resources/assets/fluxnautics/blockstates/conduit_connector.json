@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "fluxnautics:block/conduit/connector",
+      "x": -90
+    },
+    "facing=down": {
+      "model": "fluxnautics:block/conduit/connector",
+      "x": 90
+    },
+    "facing=north": {
+      "model": "fluxnautics:block/conduit/connector"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/conduit/connector",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/conduit/connector",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/conduit/connector",
+      "y": -90
+    }
+  }
+}

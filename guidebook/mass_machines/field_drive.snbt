@@ -1,0 +1,19 @@
+{
+    DataVersion: 3955,
+    size: [3, 2, 2],
+    data: [
+        {pos: [0, 0, 1], state: "mekanism:creative_chemical_tank{facing:north,fluid_logged:empty}", nbt: {chemical_tanks: [{stored: {amount: 9223372036854775807L, id: "mekanism:antimatter"}, tank: 0b}], component_config: {config2: [I; 4, 4, 1, 1, 1, 1], config3: [I; 4, 1, 1, 1, 1, 1], eject2: 1b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 15, dumping: 0, id: "mekanism:creative_chemical_tank", redstone: 0b}},
+        {pos: [1, 0, 0], state: "minecraft:lever{face:floor,facing:south,powered:false}"},
+        {pos: [1, 0, 1], state: "fluxnautics:field_drive{active:false,facing:north}", nbt: {active_state: 0b, chemical_tanks: [{stored: {amount: 100000L, id: "mekanism:antimatter"}, tank: 0b}], component_config: {config0: [I; 1, 1, 1, 1, 1, 1], config2: [I; 1, 1, 1, 1, 1, 1], config3: [I; 1, 1, 4, 8, 1, 1], eject0: 0b, eject2: 0b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 3, current_redstone: 0, energy_containers: [{container: 0b, stored: 320000000000L}], id: "fluxnautics:field_drive", impulseMultiplier: 2.0d, impulseVectorX: 1.0d, impulseVectorY: 0.0d, impulseVectorZ: 0.0d, isGlobal: 0b, progress: 0, redstone: 0b, update_delay: 0}},
+        {pos: [2, 0, 1], state: "mekanism:creative_energy_cube{facing:north,fluid_logged:empty}", nbt: {component_config: {config0: [I; 4, 4, 4, 4, 4, 4], config3: [I; 4, 1, 1, 1, 1, 1], eject0: 1b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 15, energy_containers: [{container: 0b, stored: 9223372036854775807L}], id: "mekanism:creative_energy_cube", redstone: 0b}},
+        {pos: [1, 1, 1], state: "mekanism:bounding_block{fluid_logged:empty}", nbt: {id: "mekanism:bounding_block", main: [I; 12, -60, 7], redstone: 0}}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:lever{face:floor,facing:south,powered:false}",
+        "mekanism:creative_chemical_tank{facing:north,fluid_logged:empty}",
+        "fluxnautics:field_drive{active:false,facing:north}",
+        "mekanism:creative_energy_cube{facing:north,fluid_logged:empty}",
+        "mekanism:bounding_block{fluid_logged:empty}"
+    ]
+}

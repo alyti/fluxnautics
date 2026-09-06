@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fluxnautics:block/assembly_terminal"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/assembly_terminal",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/assembly_terminal",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/assembly_terminal",
+      "y": -90
+    }
+  }
+}

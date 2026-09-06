@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "mekanism:laser_tractor_beam"
+    },
+    "I": {
+      "tag": "c:pellets/antimatter"
+    },
+    "S": {
+      "item": "fluxnautics:thruster_array_structural"
+    }
+  },
+  "pattern": [
+    "GIG",
+    "ISI",
+    "GIG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:thruster_array_alignment_y"
+  }
+}

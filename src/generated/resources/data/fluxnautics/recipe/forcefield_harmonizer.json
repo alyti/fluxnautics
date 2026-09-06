@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:energy_tablet"
+    },
+    "B": {
+      "item": "mekanism:advanced_control_circuit"
+    },
+    "C": {
+      "item": "mekanism:alloy_reinforced"
+    },
+    "Q": {
+      "item": "mekanism:steel_casing"
+    },
+    "S": {
+      "item": "mekanism:network_reader"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:forcefield_harmonizer"
+  }
+}

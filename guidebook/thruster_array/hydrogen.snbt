@@ -1,0 +1,23 @@
+{
+    DataVersion: 3955,
+    size: [3, 3, 3],
+    data: [
+        {pos: [1, 0, 1], state: "fluxnautics:ion_thruster{down:false,down_left:false,down_right:false,facing:up,front:false,left:false,right:false,up:false,up_left:false,up_right:false}", nbt: {group: 0, id: "fluxnautics:ion_thruster", inventory_id: [I; -1047117842, -1651028461, -1949937703, 446280582], redstone: 0b}},
+        {pos: [0, 1, 1], state: "minecraft:lever{face:wall,facing:west,powered:true}"},
+        {pos: [1, 1, 0], state: "minecraft:lever{face:wall,facing:north,powered:true}"},
+        {pos: [1, 1, 1], state: "fluxnautics:thruster_array_controller{active:true,facing:north}", nbt: {active_state: 1b, id: "fluxnautics:thruster_array_controller", inventory_id: [I; -1047117842, -1651028461, -1949937703, 446280582], redstone: 0b, update_delay: 0}},
+        {pos: [1, 1, 2], state: "minecraft:lever{face:wall,facing:south,powered:true}"},
+        {pos: [2, 1, 1], state: "minecraft:lever{face:wall,facing:east,powered:true}"},
+        {pos: [1, 2, 1], state: "mekanism:creative_chemical_tank{facing:north,fluid_logged:empty}", nbt: {chemical_tanks: [{stored: {amount: 9223372036854775807L, id: "mekanism:hydrogen"}, tank: 0b}], component_config: {config2: [I; 4, 1, 1, 1, 1, 4], config3: [I; 4, 1, 1, 1, 1, 1], eject2: 1b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 15, dumping: 0, id: "mekanism:creative_chemical_tank", redstone: 1b}}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:lever{face:wall,facing:west,powered:true}",
+        "minecraft:lever{face:wall,facing:north,powered:true}",
+        "minecraft:lever{face:wall,facing:south,powered:true}",
+        "minecraft:lever{face:wall,facing:east,powered:true}",
+        "fluxnautics:ion_thruster{down:false,down_left:false,down_right:false,facing:up,front:false,left:false,right:false,up:false,up_left:false,up_right:false}",
+        "fluxnautics:thruster_array_controller{active:true,facing:north}",
+        "mekanism:creative_chemical_tank{facing:north,fluid_logged:empty}"
+    ]
+}

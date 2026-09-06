@@ -1,0 +1,15 @@
+{
+	"variants": {
+		"facing=north": { "model": "fluxnautics:block/thruster_array/ion/main" },
+
+		"facing=south": { "model": "fluxnautics:block/thruster_array/ion/main", "y": 180 },
+
+		"facing=west":  { "model": "fluxnautics:block/thruster_array/ion/main", "y": 270 },
+
+		"facing=east":  { "model": "fluxnautics:block/thruster_array/ion/main", "y": 90 },
+
+		"facing=up":    { "model": "fluxnautics:block/thruster_array/ion/main", "x": 270 },
+
+		"facing=down":  { "model": "fluxnautics:block/thruster_array/ion/main", "x": 90 }
+	}
+}

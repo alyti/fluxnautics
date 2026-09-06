@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "C": {
+      "item": "mekanism:hdpe_sheet"
+    },
+    "Q": {
+      "item": "mekanism:quantum_entangloporter"
+    },
+    "S": {
+      "item": "mekanism:seismic_vibrator"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "CSC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:holo"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:nucleosynthesizing",
+  "chemical_input": {
+    "amount": 5,
+    "chemical": "mekanism:antimatter"
+  },
+  "duration": 1000,
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:teleporter"
+  },
+  "output": {
+    "count": 1,
+    "id": "fluxnautics:forcefield_matrix"
+  },
+  "per_tick_usage": true
+}

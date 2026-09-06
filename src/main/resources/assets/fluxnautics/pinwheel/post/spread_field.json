@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "type": "veil:mask",
+      "depth": true
+    },
+    {
+      "type": "veil:blit",
+      "shader": "fluxnautics:field/spread_field",
+      "in": "fluxnautics:field/field_shadow",
+      "out": "swap",
+      "clear": false
+    },
+    {
+      "type": "veil:blit",
+      "shader": "fluxnautics:field/spread_field",
+      "in": "swap",
+      "out": "fluxnautics:field/field_shadow",
+      "clear": false
+    }
+  ],
+  "framebuffers": {
+    "swap": {
+      "depth": true,
+      "width": 1024,
+      "height": 1024,
+      "format": "RGBA8"
+    }
+  }
+}

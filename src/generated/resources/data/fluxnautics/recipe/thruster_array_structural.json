@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:nugget_refined_glowstone"
+    },
+    "B": {
+      "item": "mekanism:basic_control_circuit"
+    },
+    "S": {
+      "item": "mekanism:steel_casing"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BSB",
+    "ABA"
+  ],
+  "result": {
+    "count": 4,
+    "id": "fluxnautics:thruster_array_structural"
+  }
+}

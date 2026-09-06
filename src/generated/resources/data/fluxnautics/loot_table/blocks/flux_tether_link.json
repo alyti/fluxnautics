@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "mekanism:owner",
+                "mekanism:redstone_control",
+                "mekanism:security",
+                "mekanism:upgrades"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "fluxnautics:flux_tether_link"
+        }
+      ],
+      "name": "main",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "fluxnautics:blocks/flux_tether_link"
+}

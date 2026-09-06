@@ -1,0 +1,35 @@
+{
+  "format": "POSITION_TEX",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": true,
+  "outline": false,
+  "layers": [
+    {
+      "type": "veil:shader",
+      "name": "fluxnautics:map/map"
+    },
+    {
+      "type": "minecraft:transparency",
+      "mode": "translucent"
+    },
+    {
+      "type": "minecraft:lightmap"
+    },
+    {
+      "type": "minecraft:layering"
+    },
+    {
+      "type": "minecraft:cull",
+      "face": "none"
+    },
+    {
+      "type": "veil:patches",
+      "patchVertices": 4
+    },
+    {
+      "type": "veil:depth_clamp"
+    }
+  ]
+}

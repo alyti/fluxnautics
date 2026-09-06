@@ -1,0 +1,10 @@
+{
+  "vertex": "fluxnautics:meka_fpv",
+  "fragment": "fluxnautics:meka_fpv",
+  "textures": {
+    "DiffuseSampler": {
+      "type": "framebuffer",
+      "name": "minecraft:main"
+    }
+  }
+}

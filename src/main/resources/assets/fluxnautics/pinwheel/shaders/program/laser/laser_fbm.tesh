@@ -1,0 +1,119 @@
+#version 410 core
+#include fluxnautics:noise
+
+uniform mat4 ModelViewMat;
+uniform mat4 ProjMat;
+uniform float time;
+uniform float uDisplace;    
+uniform float uTessBulge;   
+uniform vec3 uPlumeXAxis;   
+uniform vec3 uPlumeYAxis;   
+uniform vec3 uPlumeCenter;  
+uniform float uPlumeRadius; 
+uniform float uPlumeSeed;   
+uniform float uTessFit;     
+
+layout(quads, fractional_odd_spacing, ccw) in;
+
+in float patchVertexDistance[];
+in vec2 patchLengthData[];
+in vec4 patchVertexColor[];
+in vec3 patchModelPos[];
+
+out float vertexDistance;
+out vec2 lengthData;
+out vec4 vertexColor;
+out vec3 vNormalW;
+out vec3 vViewPos;
+out vec2 vLateral; 
+
+void main() {
+    vec2 tc = gl_TessCoord.xy; 
+
+    vec3 tangentW = patchModelPos[1] - patchModelPos[0];
+    vec3 nearMid = 0.5 * (patchModelPos[0] + patchModelPos[1]);
+    vec3 farMid  = 0.5 * (patchModelPos[2] + patchModelPos[3]);
+    vec3 axisW = farMid - nearMid;
+
+    vec3 pos = mix(mix(patchModelPos[0], patchModelPos[1], tc.x),
+    mix(patchModelPos[3], patchModelPos[2], tc.x), tc.y);
+    vec2 ld = mix(mix(patchLengthData[0], patchLengthData[1], tc.x),
+    mix(patchLengthData[3], patchLengthData[2], tc.x), tc.y);
+    vec4 col = mix(mix(patchVertexColor[0], patchVertexColor[1], tc.x),
+    mix(patchVertexColor[3], patchVertexColor[2], tc.x), tc.y);
+
+    float t = mod(time, 1000.0);
+    float lengthPos = min(ld.y, 1.0);
+
+    vec2 lateral = vec2(dot(pos - uPlumeCenter, uPlumeXAxis),
+    dot(pos - uPlumeCenter, uPlumeYAxis));
+
+    
+    vec3 nrmW = vec3(0.0);
+    float axisLen = length(axisW);
+    if (axisLen > 0.001 && length(tangentW) > 0.001) {
+        nrmW = normalize(cross(tangentW, axisW / axisLen));
+    }
+
+    float oriented = 0.0;
+    if (uPlumeRadius > 0.0001 && dot(nrmW, nrmW) > 0.5) {
+        vec3 axisDir = axisW / axisLen;
+        vec3 radial = pos - uPlumeCenter;
+        radial -= axisDir * dot(radial, axisDir);
+        if (length(radial) > 0.001) {
+            if (dot(nrmW, radial) < 0.0) {
+                nrmW = -nrmW;
+            }
+            oriented = 1.0;
+        }
+    }
+
+    float spanBlocks = abs(patchLengthData[1].x - patchLengthData[0].x);
+    float edge = min(min(tc.x, 1.0 - tc.x) * spanBlocks,
+    min(tc.y, 1.0 - tc.y) * max(axisLen, 0.001));
+    float pin = smoothstep(0.0, 0.3, edge);
+
+    float fitRef = uTessFit > 0.0 ? uTessFit : 1.25;
+    float sizeFit = uPlumeRadius > 0.0001 ? clamp(uPlumeRadius / fitRef, 0.4, 1.0) : 1.0;
+
+    float amp = uDisplace > 0.0 ? uDisplace : 0.06;
+    
+    amp *= smoothstep(0.0, 0.18, lengthPos) * (0.35 + 0.65 * smoothstep(0.05, 0.6, lengthPos));
+    amp *= pin;
+    amp *= sizeFit;
+    if (amp > 0.0001 && dot(nrmW, nrmW) > 0.5) {
+        float ripple = plumeFbm(vec2(lengthPos * 3.0 - t * 0.8, ld.x * 0.35 + t * 0.03 + uPlumeSeed * 30.0), vec2(800.0, 30.0));
+        pos += nrmW * (ripple - 0.5) * 2.0 * amp;
+    }
+
+    float bulgeAmp = uTessBulge > 0.0 ? uTessBulge : 0.10;
+    bulgeAmp *= pin;
+    bulgeAmp *= sizeFit;
+    if (bulgeAmp > 0.0001 && dot(nrmW, nrmW) > 0.5) {
+        float throat = exp(-pow((lengthPos - 0.18) * 3.5, 2.0));
+        pos += nrmW * throat * bulgeAmp;
+    }
+
+    float tip = smoothstep(0.7, 1.0, lengthPos) * pin;
+    if (tip > 0.001 && dot(nrmW, nrmW) > 0.5) {
+        float wisp = plumeFbm(vec2(ld.x * 0.5 + lengthPos * 4.0 - t * 0.5, t * 0.07 + 5.0 + uPlumeSeed * 70.0), vec2(500.0, 70.0));
+        pos += nrmW * (wisp - 0.5) * 2.0 * tip * 0.12 * sizeFit;
+        pos += axisW * (wisp - 0.5) * 2.0 * tip * 0.06 * sizeFit;
+    }
+
+    vec2 swayField = vec2(
+    plumeNoise(vec2(lengthPos * 3.0 - t * 0.35, t * 0.05 + 7.0 + uPlumeSeed * 50.0), vec2(70.0, 50.0)) - 0.5,
+    plumeNoise(vec2(lengthPos * 3.0 - t * 0.35, t * 0.05 + 43.0 + uPlumeSeed * 50.0), vec2(70.0, 50.0)) - 0.5);
+    float swayAmp = 0.3 * smoothstep(0.0, 0.5, lengthPos) * sizeFit;
+    pos += (uPlumeXAxis * swayField.x + uPlumeYAxis * swayField.y) * swayAmp;
+
+    vec4 viewPos = ModelViewMat * vec4(pos, 1.0);
+    gl_Position = ProjMat * viewPos;
+    vertexDistance = length(viewPos.xyz);
+    lengthData = ld;
+    vertexColor = col;
+    
+    vNormalW = nrmW * oriented;
+    vViewPos = viewPos.xyz;
+    vLateral = lateral;
+}

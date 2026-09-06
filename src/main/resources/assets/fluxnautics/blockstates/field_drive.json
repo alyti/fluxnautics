@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "facing=north": { "model": "fluxnautics:block/field_drive/main" },
+
+    "facing=south": { "model": "fluxnautics:block/field_drive/main", "y": 180 },
+
+    "facing=west":  { "model": "fluxnautics:block/field_drive/main", "y": 270 },
+
+    "facing=east":  { "model": "fluxnautics:block/field_drive/main", "y": 90 }
+  }
+}

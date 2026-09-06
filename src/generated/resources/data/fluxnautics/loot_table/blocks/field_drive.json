@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "fluxnautics:impulse_mult",
+                "fluxnautics:impulse_vec_x",
+                "fluxnautics:impulse_vec_y",
+                "fluxnautics:impulse_vec_z",
+                "fluxnautics:is_global",
+                "mekanism:ejector",
+                "mekanism:owner",
+                "mekanism:redstone_control",
+                "mekanism:security",
+                "mekanism:side_config",
+                "mekanism:upgrades",
+                "mekanism:energy",
+                "mekanism:items",
+                "mekanism:chemicals"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "fluxnautics:field_drive"
+        }
+      ],
+      "name": "main",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "fluxnautics:blocks/field_drive"
+}

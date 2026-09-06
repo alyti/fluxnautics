@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "fluxnautics:block/thruster_array/alignment/base",
+  "textures": {
+    "all": "fluxnautics:block/thruster_array_alignment_y"
+  }
+}

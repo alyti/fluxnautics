@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fluxnautics:block/thruster_array/subcontroller"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/thruster_array/subcontroller",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/thruster_array/subcontroller",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/thruster_array/subcontroller",
+      "y": -90
+    }
+  }
+}

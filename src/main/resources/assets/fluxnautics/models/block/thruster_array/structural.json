@@ -1,0 +1,7 @@
+{
+  "parent": "mekanism:block/machine",
+  "textures": {
+    "sides": "fluxnautics:block/thruster_array_structural",
+    "front": "fluxnautics:block/thruster_array_structural"
+  }
+}

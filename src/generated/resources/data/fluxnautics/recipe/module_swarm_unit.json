@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "tag": "c:alloys/ultimate"
+    },
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "M": {
+      "item": "fluxnautics:meka_robit"
+    },
+    "Q": {
+      "item": "mekanism:module_base"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "MQM",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:module_swarm_unit"
+  }
+}

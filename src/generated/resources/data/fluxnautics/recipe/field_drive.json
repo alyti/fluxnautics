@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:pellet_antimatter"
+    },
+    "B": {
+      "item": "mekanism:ultimate_induction_cell"
+    },
+    "C": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "Q": {
+      "item": "mekanism:quantum_entangloporter"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:field_drive"
+  }
+}

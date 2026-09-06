@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "tag": "c:alloys/ultimate"
+    },
+    "B": {
+      "item": "mekanism:hdpe_sheet"
+    },
+    "M": {
+      "tag": "c:circuits/ultimate"
+    },
+    "Q": {
+      "item": "mekanism:module_magnetic_attraction_unit"
+    },
+    "S": {
+      "item": "mekanism:qio_importer"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "MQM",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:module_quantum_pull_unit"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format": "NEW_ENTITY",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": false,
+  "outline": false,
+  "layers": [
+    {
+      "type": "veil:shader",
+      "name": "fluxnautics:anchor_stasis"
+    },
+    {
+      "type": "minecraft:depth_test",
+      "mode": "lequal"
+    },
+    {
+      "type": "minecraft:transparency",
+      "mode": "additive"
+    },
+    {
+      "type": "minecraft:write_mask",
+      "color": true,
+      "depth": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "loader": "neoforge:composite",
+  "parent": "block/block",
+  "textures": {
+    "particle": "fluxnautics:block/conduit_machine"
+  },
+  "children": {
+    "base": {
+      "parent": "fluxnautics:block/conduit/base"
+    },
+    "core": {
+      "parent": "fluxnautics:block/conduit/core"
+    },
+    "port": {
+      "parent": "fluxnautics:block/conduit/connector_ports"
+    }
+  }
+}

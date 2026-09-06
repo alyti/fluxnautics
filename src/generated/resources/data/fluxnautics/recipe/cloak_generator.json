@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:teleportation_core"
+    },
+    "B": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "C": {
+      "item": "mekanism:alloy_atomic"
+    },
+    "M": {
+      "item": "mekanism:pellet_antimatter"
+    },
+    "Q": {
+      "item": "mekanism:quantum_entangloporter"
+    },
+    "S": {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BQB",
+    "AMA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:cloak_generator"
+  }
+}

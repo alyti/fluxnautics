@@ -1,0 +1,23 @@
+{
+    DataVersion: 3955,
+    size: [6, 4, 2],
+    data: [
+        {pos: [1, 0, 1], state: "fluxnautics:conduit_connector{active:false,facing:east}", nbt: {active_state: 0b, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, conduitStrand: {HasConduitAttached: [I; -794693423, 654262362, -1117435774, -189875192], OwnStrand: 1b, Strand: {attachments: [{blockAttachment: [I; 16, -60, 7], point: "END"}, {blockAttachment: [I; 12, -60, 7], point: "START"}], extension_goal: 0.0d, points: [[12.50011157989502d, -59.50008773803711d, 7.5d], [12.501617431640625d, -59.5001220703125d, 7.5d], [13.5001859664917d, -59.5660514831543d, 7.5d], [14.500649452209473d, -59.58802795410156d, 7.5d], [15.501265525817871d, -59.56602096557617d, 7.5d], [16.499834060668945d, -59.500057220458984d, 7.5d]], uuid: "d0a1f0d1-26ff-405a-bd65-4882f4aebc08"}}, control_type: 0, current_redstone: 0, id: "fluxnautics:conduit_connector", redstone: 0b, update_delay: 0}},
+        {pos: [5, 0, 1], state: "fluxnautics:conduit_connector{active:false,facing:west}", nbt: {active_state: 0b, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, conduitStrand: {HasConduitAttached: [I; -794693423, 654262362, -1117435774, -189875192], OwnStrand: 0b}, control_type: 0, current_redstone: 0, id: "fluxnautics:conduit_connector", redstone: 0b, update_delay: 0}},
+        {pos: [1, 1, 1], state: "fluxnautics:conduit_port{active:false,facing:down,fluid_logged:empty}", nbt: {active_state: 0b, control_type: 0, current_redstone: 0, id: "fluxnautics:conduit_port", mapInitialized: 1b, proxyMap: {BACK: "BACK", BOTTOM: "BOTTOM", LEFT: "LEFT", RIGHT: "RIGHT", TOP: "TOP"}, redstone: 0b, update_delay: 0}},
+        {pos: [5, 1, 1], state: "fluxnautics:conduit_port{active:false,facing:down,fluid_logged:empty}", nbt: {active_state: 0b, control_type: 0, current_redstone: 0, id: "fluxnautics:conduit_port", mapInitialized: 0b, redstone: 0b, reverseProxyMap: {BACK: "BACK", BOTTOM: "BOTTOM", LEFT: "LEFT", RIGHT: "RIGHT", TOP: "TOP"}, update_delay: 0}},
+        {pos: [1, 2, 1], state: "mekanism:ultimate_universal_cable{fluid_logged:empty}", nbt: {acceptors: 3b, connection: [I; 0, 0, 0, 0, 0, 0], connections: 0b, id: "mekanism:ultimate_universal_cable", redstone: 0b}},
+        {pos: [5, 2, 1], state: "mekanism:ultimate_universal_cable{fluid_logged:empty}", nbt: {acceptors: 3b, connection: [I; 0, 0, 0, 0, 0, 0], connections: 0b, energy: 4096000L, id: "mekanism:ultimate_universal_cable", redstone: 0b}},
+        {pos: [1, 3, 1], state: "mekanism:creative_energy_cube{facing:north,fluid_logged:empty}", nbt: {component_config: {config0: [I; 1, 1, 1, 1, 1, 1], config3: [I; 4, 1, 1, 1, 1, 1], eject0: 0b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 0, id: "mekanism:creative_energy_cube", redstone: 0b}},
+        {pos: [5, 3, 1], state: "mekanism:creative_energy_cube{facing:west,fluid_logged:empty}", nbt: {component_config: {config0: [I; 4, 4, 4, 4, 4, 4], config3: [I; 4, 1, 1, 1, 1, 1], eject0: 1b, eject3: 0b}, component_frequency: {Security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966], security_mode: "public"}}, component_security: {owner: [I; 940439953, -167562164, -1601161573, -1389718966]}, control_type: 0, current_redstone: 15, energy_containers: [{container: 0b, stored: 9223372036854775807L}], id: "mekanism:creative_energy_cube", redstone: 0b}}
+    ],
+    entities: [],
+    palette: [
+        "fluxnautics:conduit_connector{active:false,facing:east}",
+        "fluxnautics:conduit_connector{active:false,facing:west}",
+        "fluxnautics:conduit_port{active:false,facing:down,fluid_logged:empty}",
+        "mekanism:ultimate_universal_cable{fluid_logged:empty}",
+        "mekanism:creative_energy_cube{facing:north,fluid_logged:empty}",
+        "mekanism:creative_energy_cube{facing:west,fluid_logged:empty}"
+    ]
+}

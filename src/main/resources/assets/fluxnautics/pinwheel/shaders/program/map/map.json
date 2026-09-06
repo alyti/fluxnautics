@@ -1,0 +1,23 @@
+{
+  "vertex": "fluxnautics:map/map",
+  "tesselation_control": "fluxnautics:map/map",
+  "tesselation_evaluation": "fluxnautics:map/map",
+  "fragment": "fluxnautics:map/map",
+  "definitions": [
+    {
+      "MIN_TESS_LEVEL": 4
+    },
+    {
+      "MAX_TESS_LEVEL": 64
+    },
+    {
+      "MIN_DISTANCE": 1
+    },
+    {
+      "MAX_DISTANCE": 6
+    },
+    {
+      "USE_TESSELLATION": 1
+    }
+  ]
+}

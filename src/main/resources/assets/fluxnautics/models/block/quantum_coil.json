@@ -1,0 +1,242 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"coil": "fluxnautics:block/quantum_coil",
+		"particle": "mekanism:block/steel_casing"
+	},
+	"elements": [
+		{
+			"name": "body",
+			"from": [5, 1, 5],
+			"to": [11, 8, 11],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [8, 7, 14, 14], "texture": "#coil"},
+				"east": {"uv": [8, 7, 14, 14], "texture": "#coil"},
+				"south": {"uv": [8, 7, 14, 14], "texture": "#coil"},
+				"west": {"uv": [8, 7, 14, 14], "texture": "#coil"},
+				"up": {"uv": [8, 0, 14, 6], "texture": "#coil"}
+			}
+		},
+		{
+			"name": "body",
+			"from": [1.008, 1.008, 1.008],
+			"to": [14.992, 2, 14.992],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 7, 8, 8], "texture": "#coil"},
+				"east": {"uv": [0, 7, 8, 8], "texture": "#coil"},
+				"south": {"uv": [0, 7, 8, 8], "texture": "#coil"},
+				"west": {"uv": [0, 7, 8, 8], "texture": "#coil"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#coil"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#coil"}
+			}
+		},
+		{
+			"name": "wire1",
+			"from": [4.992, 6, 7],
+			"to": [5.992, 11, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"east": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"south": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"west": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"up": {"uv": [7, 8, 8, 9], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "wire1",
+			"from": [7, 6, 4.992],
+			"to": [9, 11, 5.992],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"east": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"south": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"west": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"up": {"uv": [7, 8, 8, 9], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "wire1",
+			"from": [7, 6, 10.008],
+			"to": [9, 11, 11.008],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"east": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"south": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"west": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"up": {"uv": [7, 8, 8, 9], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "wire2",
+			"from": [10.008, 6, 7],
+			"to": [11.008, 11, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"east": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"south": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"west": {"uv": [7, 8, 8, 13], "texture": "#coil"},
+				"up": {"uv": [7, 8, 8, 9], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "center",
+			"from": [7, 13, 7],
+			"to": [9, 14, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [4, 11, 6, 12], "texture": "#coil"},
+				"east": {"uv": [4, 11, 6, 12], "texture": "#coil"},
+				"south": {"uv": [4, 11, 6, 12], "texture": "#coil"},
+				"west": {"uv": [4, 11, 6, 12], "texture": "#coil"},
+				"up": {"uv": [4, 8, 7, 11], "texture": "#coil", "cullface": "up"}
+			}
+		},
+		{
+			"name": "coil_large",
+			"from": [6, 8, 6],
+			"to": [10, 13, 10],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 4, 13], "texture": "#coil"},
+				"east": {"uv": [0, 9, 4, 14], "texture": "#coil"},
+				"south": {"uv": [0, 8, 4, 13], "texture": "#coil"},
+				"west": {"uv": [0, 9, 4, 14], "texture": "#coil"},
+				"up": {"uv": [0, 12, 4, 16], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "coil_1",
+			"from": [7, 1.01, 4],
+			"to": [9, 6.008, 6],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"east": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"west": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"up": {"uv": [0, 8, 2, 10], "texture": "#coil"},
+				"down": {"uv": [0, 11, 2, 13], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "coil_2",
+			"from": [7, 1.01, 10],
+			"to": [9, 6.008, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"east": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"south": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"west": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"up": {"uv": [0, 8, 2, 10], "texture": "#coil"},
+				"down": {"uv": [0, 11, 2, 13], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "coil_3",
+			"from": [4, 1.01, 7],
+			"to": [6, 6.008, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"south": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"west": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"up": {"uv": [0, 8, 2, 10], "texture": "#coil"},
+				"down": {"uv": [0, 11, 2, 13], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		},
+		{
+			"name": "coil_4",
+			"from": [10, 1.01, 7],
+			"to": [12, 6.008, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"east": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"south": {"uv": [0, 8, 2, 13], "texture": "#coil"},
+				"up": {"uv": [0, 8, 2, 10], "texture": "#coil"},
+				"down": {"uv": [0, 11, 2, 13], "texture": "#coil"}
+			},
+			"neoforge_data": {
+				"block_light": 15,
+				"sky_light": 15
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 1.75, 1.75],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 1.75, 1.75],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 1.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 1.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 14.25, 0]
+		},
+		"fixed": {
+			"translation": [0, 0, -0.5],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

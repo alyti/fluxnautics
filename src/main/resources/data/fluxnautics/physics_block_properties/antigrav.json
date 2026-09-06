@@ -1,0 +1,6 @@
+{
+  "selector": "fluxnautics:anti_grav",
+  "properties": {
+    "sable:mass": 16
+  }
+}

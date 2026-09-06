@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "fluxnautics:cooldown_ticks",
+                "fluxnautics:emitter_config",
+                "mekanism:ejector",
+                "mekanism:owner",
+                "mekanism:redstone_control",
+                "mekanism:security",
+                "mekanism:side_config",
+                "mekanism:upgrades",
+                "mekanism:energy",
+                "mekanism:items"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "fluxnautics:forcefield_emitter"
+        }
+      ],
+      "name": "main",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "fluxnautics:blocks/forcefield_emitter"
+}

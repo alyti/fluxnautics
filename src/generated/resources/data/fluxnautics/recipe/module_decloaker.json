@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mekanism:alloy_atomic"
+    },
+    "C": {
+      "item": "mekanism:nugget_refined_glowstone"
+    },
+    "Q": {
+      "item": "mekanism:module_base"
+    },
+    "S": {
+      "item": "mekanism:pellet_polonium"
+    }
+  },
+  "pattern": [
+    "BCB",
+    "BQB",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:module_decloaker"
+  }
+}

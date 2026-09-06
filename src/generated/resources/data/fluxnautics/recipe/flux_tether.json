@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "fluxnautics:conduit_connector"
+    },
+    "B": {
+      "item": "mekanism:laser_amplifier"
+    },
+    "C": {
+      "tag": "c:circuits/ultimate"
+    },
+    "Q": {
+      "item": "mekanism:teleportation_core"
+    }
+  },
+  "pattern": [
+    "CBA",
+    "BQB",
+    "ABC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluxnautics:flux_tether"
+  }
+}

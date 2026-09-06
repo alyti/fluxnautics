@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "fluxnautics:blueprint_config",
+                "mekanism:owner",
+                "mekanism:redstone_control",
+                "mekanism:security"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "fluxnautics:assembly_terminal"
+        }
+      ],
+      "name": "main",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "fluxnautics:blocks/assembly_terminal"
+}

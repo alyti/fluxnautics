@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "fluxnautics:block/forcefield/emitter"
+    },
+    "facing=down": {
+      "model": "fluxnautics:block/forcefield/emitter",
+      "x": -180
+    },
+    "facing=north": {
+      "model": "fluxnautics:block/forcefield/emitter"
+    },
+    "facing=south": {
+      "model": "fluxnautics:block/forcefield/emitter",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fluxnautics:block/forcefield/emitter",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fluxnautics:block/forcefield/emitter",
+      "y": -90
+    }
+  }
+}
