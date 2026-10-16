@@ -163,9 +163,8 @@ dependencies {
     runtimeOnly(project(':annotation-processor'))
     annotationProcessor(project(':annotation-processor'))
 
-    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2"))
-    implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.7-beta.2"))
-
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7"))
+    implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.7"))
 
     implementation("foundry.imguimc:imguimc-neoforge-${project.minecraft_version}:${project.imguimc_version}")
     def veil = "foundry.veil:veil-neoforge-${minecraft_version}:${veil_version}"
