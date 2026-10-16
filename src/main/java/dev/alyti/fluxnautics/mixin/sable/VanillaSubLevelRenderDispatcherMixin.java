@@ -11,11 +11,15 @@ import dev.ryanhcode.sable.sublevel.ClientSubLevel;
 import dev.ryanhcode.sable.sublevel.render.dispatcher.VanillaSubLevelRenderDispatcher;
 import dev.ryanhcode.sable.sublevel.render.vanilla.VanillaChunkedSubLevelRenderData;
 import dev.alyti.fluxnautics.client.util.SimpleSubLevelGroupRenderer;
+import foundry.veil.api.compat.IrisCompat;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ShaderInstance;
 import net.minecraft.client.renderer.chunk.SectionRenderDispatcher;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.joml.Matrix4f;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL14;
+import org.lwjgl.opengl.GL20;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -37,7 +41,12 @@ public abstract class VanillaSubLevelRenderDispatcherMixin {
             cloakOpacity.set(opacity);
             cloakOpacity.upload();
         }
+        final boolean blendFade = cloakOpacity == null && CloakIrisBlendFade.isActive() && opacity > 0.0F && opacity < 1.0F;
+        if (blendFade)
+            CloakIrisBlendFade.begin(opacity);
         original.call(instance, layer, shader, modelView, camX, camY, camZ);
+        if (blendFade)
+            CloakIrisBlendFade.end();
     }
 
     @Inject(method = "renderSectionLayer", at = @At("RETURN"))
@@ -128,4 +137,23 @@ public abstract class VanillaSubLevelRenderDispatcherMixin {
         return filtered;
     }
 
+
+    public static final class CloakIrisBlendFade {
+        public static boolean isActive() {
+            if (!IrisCompat.isLoaded())
+                return false;
+            if (IrisCompat.INSTANCE == null)
+                return false;
+            return IrisCompat.INSTANCE.areShadersLoaded();
+        }
+        public static void begin(float opacity) {
+            GL14.glBlendColor(1.0F, 1.0F, 1.0F, opacity);
+            GL11.glEnable(GL11.GL_BLEND);
+            GL20.glBlendFuncSeparate(GL14.GL_CONSTANT_ALPHA, GL14.GL_ONE_MINUS_CONSTANT_ALPHA, GL11.GL_ZERO, GL11.GL_ONE);
+        }
+        public static void end() {
+            GL11.glDisable(GL11.GL_BLEND);
+            GL20.glBlendFuncSeparate(GL11.GL_ONE, GL11.GL_ZERO, GL11.GL_ONE, GL11.GL_ZERO);
+        }
+    }
 }
