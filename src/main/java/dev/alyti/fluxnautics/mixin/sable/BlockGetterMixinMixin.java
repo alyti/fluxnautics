@@ -22,16 +22,25 @@ import java.util.Set;
 @Mixin(value = BlockGetter.class, priority = 1600)
 public interface BlockGetterMixinMixin {
 
+
+    @TargetHandler(mixin = "dev.ryanhcode.sable.mixin.clip_overwrite.BlockGetterMixin", name = "clip")
+    @Inject(method = "@MixinSquared:Handler", at = @At("RETURN"), cancellable = true, require = 0, expect = 0)
+    default void fluxnautics$clip$afterSable(ClipContext clipContext, CallbackInfoReturnable<BlockHitResult> cir) {
+        fluxnautics$redirectForcefield(clipContext, cir);
+    }
+
+    @TargetHandler(mixin = "com.misterblusky9.pym.internal.mixin.interaction.SubLevelRaycastDistanceMixin", name = "clip")
+    @Inject(method = "@MixinSquared:Handler", at = @At("RETURN"), cancellable = true, require = 0, expect = 0)
+    default void fluxnautics$clip$afterPym(ClipContext clipContext, CallbackInfoReturnable<BlockHitResult> cir) {
+        fluxnautics$redirectForcefield(clipContext, cir);
+    }
+
+
     /**
      * @author Lunalyti
      * @reason Hijack clips into forcefields from outside
      */
-    @TargetHandler(
-        mixin = "dev.ryanhcode.sable.mixin.clip_overwrite.BlockGetterMixin",
-        name = "clip"
-    )
-    @Inject(method = "@MixinSquared:Handler", at = @At("RETURN"), cancellable = true)
-    default void clip(ClipContext clipContext, CallbackInfoReturnable<BlockHitResult> cir) {
+    default void fluxnautics$redirectForcefield(ClipContext clipContext, CallbackInfoReturnable<BlockHitResult> cir) {
         if (!FluxnauticsConfig.common.forcefieldRedirectRaycast.get())
             return;
 
