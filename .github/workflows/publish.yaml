@@ -1,0 +1,151 @@
+name: Publish release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (build + artifact only, no publish)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Build, release & publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Validate Gradle wrapper & set up caching
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          validate-wrappers: true
+
+      - name: Resolve version & release channel
+        id: vars
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          prop="$(grep -E '^mod_version[[:space:]]*=' gradle.properties | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          if [ -z "$prop" ]; then
+            echo "::error::Could not read mod_version from gradle.properties"; exit 1
+          fi
+
+          if [ "$REF_TYPE" = "tag" ]; then
+            version="${REF_NAME#v}"
+            if [ "$version" != "$prop" ]; then
+              echo "::error::Tag $REF_NAME does not match mod_version=$prop in gradle.properties."
+              echo "::error::Fix the tag (delete + re-push) or set mod_version=$version and commit it."
+              exit 1
+            fi
+            tag_name="$REF_NAME"
+          else
+            version="$prop"
+            tag_name="v$prop"
+          fi
+
+          case "$(echo "$version" | tr '[:upper:]' '[:lower:]')" in
+            *alpha*)          version_type=alpha ;;
+            *beta*|*rc*|*pre*) version_type=beta  ;;
+            *)                 version_type=release ;;
+          esac
+
+          {
+            echo "version=$version"
+            echo "version_type=$version_type"
+            echo "tag_name=$tag_name"
+          } >> "$GITHUB_OUTPUT"
+          echo "Publishing fluxnautics $version ($version_type)"
+
+      - name: Build
+        run: ./gradlew build --stacktrace
+
+      - name: Upload build artifacts (dry-run safety net)
+        uses: actions/upload-artifact@v7
+        with:
+          name: fluxnautics-${{ steps.vars.outputs.version }}
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-all.jar
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Create GitHub release
+        if: ${{ github.ref_type == 'tag' && inputs.dry_run != true }}
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Fluxnautics ${{ steps.vars.outputs.version }}
+          generate_release_notes: true
+          files: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-all.jar
+
+      - name: Collect changelog
+        id: notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REF_TYPE: ${{ github.ref_type }}
+        run: |
+          if [ "$REF_TYPE" = "tag" ] && [ "${{ inputs.dry_run }}" != "true" ]; then
+            gh release view "$GITHUB_REF_NAME" --json body -q .body > /tmp/body.md
+          else
+            {
+              echo "Automated build from commit $GITHUB_SHA."
+              echo
+              echo "Not a tagged release - see the repository for details."
+            } > /tmp/body.md
+          fi
+          {
+            echo "body<<CHANGELOG_EOF"
+            cat /tmp/body.md
+            echo "CHANGELOG_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Publish to Modrinth
+        uses: Kira-NT/mc-publish@v3.3
+        with:
+          modrinth-id: fluxnautics
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          files-primary: build/libs/!(*-sources).jar
+          name: Fluxnautics ${{ steps.vars.outputs.version }}
+          version-number: ${{ steps.vars.outputs.version }}
+          version-type: ${{ steps.vars.outputs.version_type }}
+          changelog: ${{ steps.notes.outputs.body }}
+
+          loaders: neoforge
+          game-versions: 1.21.1
+          java: 21
+
+          dependencies: |
+            mekanism:required
+            sable:required
+            cc-tweaked:optional
+            guideme:optional
+
+          dry-run: ${{ inputs.dry_run == true }}
