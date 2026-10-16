@@ -92,6 +92,11 @@ neoForge {
 
             systemProperty "guideme.${project.mod_id}.guide.sources", file("guidebook").absolutePath
             systemProperty "guideme.${project.mod_id}.guide.sourcesNamespace", project.mod_id
+
+            if (System.getProperty('os.name').toLowerCase().contains('linux') && file('/run/opengl-driver').exists()) {
+                environment 'LD_LIBRARY_PATH', "/etc/profiles/per-user/${System.getProperty('user.name')}/lib:/run/opengl-driver/lib:/run/opengl-driver-32/lib"
+                environment '__GLX_VENDOR_LIBRARY_NAME', 'mesa'
+            }
         }
     }
 
