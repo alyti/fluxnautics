@@ -45,6 +45,8 @@
     "interaction_callback.MouseHandlerMixin",
     "mekanism.client.AccessorGuiConfigurableTile",
     "mekanism.client.MixinGuiMekanismTile",
+    "mekanism.client.AccessorSoundHandler",
+    "mekanism.client.MixinSoundHandlerTileSounds",
     "sable.ClientSubLevelContainerMixin",
     "sable.DebugRendererMixinMixin",
     "sable.EntityRendererMixinMixin",
